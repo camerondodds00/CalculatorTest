@@ -52,7 +52,6 @@ class Calculator {
         return fib(n - 1) + fib(n - 2);
     }
 
-    breakingTheProject
 
     /*
     Returns binary value of the given int number
