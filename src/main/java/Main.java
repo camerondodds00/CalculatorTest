@@ -6,8 +6,8 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("Welcome to the calculator");
-        System.out.println("Available commands are 'add', 'subtract', 'multiply', 'divide', quit.");
-        System.out.println("All math commands accept 2 input numbers, separated by spaces.");
+        System.out.println("Available commands are 'add', 'subtract', 'multiply', 'divide', 'fibonacci', 'toBinary', 'quit'.");
+        System.out.println("All math commands accept 2 input numbers, separated by spaces. fibonacci and toBinary accept 1 input");
 
         Calculator calculator = new Calculator();
         Scanner scanner = new Scanner(System.in);
@@ -26,7 +26,14 @@ public class Main {
                 System.out.println(calculator.multiply(Integer.valueOf(inputs[1]), Integer.valueOf(inputs[2])));
             } else if (inputs[0].equals("divide")) {
                 System.out.println(calculator.divide(Integer.valueOf(inputs[1]), Integer.valueOf(inputs[2])));
-            } else if (inputs[0].equals("quit")) {
+            } else if (inputs[0].equals("fibonacci")) {
+            System.out.println(calculator.fibonacciNumberFinder(Integer.valueOf(inputs[1])));
+            } else if (inputs[0].equals("toBinary")) {
+                System.out.println(calculator.intToBinaryNumber(Integer.valueOf(inputs[1])));
+            }
+
+
+            else if (inputs[0].equals("quit")) {
                 break;
             }
             else {
